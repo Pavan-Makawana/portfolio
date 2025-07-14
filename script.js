@@ -64,6 +64,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Download CV
+function downloadFile() {
+      const link = document.createElement("a");
+      link.href = "Pavan_Makawana_Resume.pdf"; // Replace with your actual file path or URL
+      link.download = "Pavan_Makawana_Resume.pdf"; // Set the filename for download
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
 // Form submission
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
